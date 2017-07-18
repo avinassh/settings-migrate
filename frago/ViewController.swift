@@ -10,6 +10,9 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var nameTextField: NSTextField!
+    @IBOutlet weak var targetLowTextField: NSTextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +25,10 @@ class ViewController: NSViewController {
         }
     }
 
-
+    @IBAction func onSubmit(_ sender: NSButton) {
+        let name = nameTextField.stringValue
+        let targetLow = targetLowTextField.intValue
+        print(name, targetLow)
+    }
 }
 
