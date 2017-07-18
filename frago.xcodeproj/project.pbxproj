@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		82AB356A1F1DF2F800C6F661 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AB35691F1DF2F800C6F661 /* AppDelegate.swift */; };
+		82AB356C1F1DF2F800C6F661 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AB356B1F1DF2F800C6F661 /* ViewController.swift */; };
+		82AB356F1F1DF2F800C6F661 /* frago.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82AB356D1F1DF2F800C6F661 /* frago.xcdatamodeld */; };
+		82AB35711F1DF2F800C6F661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82AB35701F1DF2F800C6F661 /* Assets.xcassets */; };
+		82AB35741F1DF2F900C6F661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AB35721F1DF2F900C6F661 /* Main.storyboard */; };
+		82AB357F1F1DF2F900C6F661 /* fragoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AB357E1F1DF2F900C6F661 /* fragoTests.swift */; };
+		82AB358A1F1DF2F900C6F661 /* fragoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AB35891F1DF2F900C6F661 /* fragoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		82AB357B1F1DF2F900C6F661 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82AB355E1F1DF2F800C6F661 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82AB35651F1DF2F800C6F661;
+			remoteInfo = frago;
+		};
+		82AB35861F1DF2F900C6F661 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82AB355E1F1DF2F800C6F661 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82AB35651F1DF2F800C6F661;
+			remoteInfo = frago;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		82AB35661F1DF2F800C6F661 /* frago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frago.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		82AB35691F1DF2F800C6F661 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		82AB356B1F1DF2F800C6F661 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		82AB356E1F1DF2F800C6F661 /* frago.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = frago.xcdatamodel; sourceTree = "<group>"; };
+		82AB35701F1DF2F800C6F661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		82AB35731F1DF2F900C6F661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		82AB35751F1DF2F900C6F661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82AB357A1F1DF2F900C6F661 /* fragoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fragoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82AB357E1F1DF2F900C6F661 /* fragoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fragoTests.swift; sourceTree = "<group>"; };
+		82AB35801F1DF2F900C6F661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82AB35851F1DF2F900C6F661 /* fragoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fragoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82AB35891F1DF2F900C6F661 /* fragoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fragoUITests.swift; sourceTree = "<group>"; };
+		82AB358B1F1DF2F900C6F661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82AB35631F1DF2F800C6F661 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82AB35771F1DF2F900C6F661 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82AB35821F1DF2F900C6F661 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		82AB355D1F1DF2F800C6F661 = {
+			isa = PBXGroup;
+			children = (
+				82AB35681F1DF2F800C6F661 /* frago */,
+				82AB357D1F1DF2F900C6F661 /* fragoTests */,
+				82AB35881F1DF2F900C6F661 /* fragoUITests */,
+				82AB35671F1DF2F800C6F661 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		82AB35671F1DF2F800C6F661 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82AB35661F1DF2F800C6F661 /* frago.app */,
+				82AB357A1F1DF2F900C6F661 /* fragoTests.xctest */,
+				82AB35851F1DF2F900C6F661 /* fragoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82AB35681F1DF2F800C6F661 /* frago */ = {
+			isa = PBXGroup;
+			children = (
+				82AB35691F1DF2F800C6F661 /* AppDelegate.swift */,
+				82AB356B1F1DF2F800C6F661 /* ViewController.swift */,
+				82AB35701F1DF2F800C6F661 /* Assets.xcassets */,
+				82AB35721F1DF2F900C6F661 /* Main.storyboard */,
+				82AB35751F1DF2F900C6F661 /* Info.plist */,
+				82AB356D1F1DF2F800C6F661 /* frago.xcdatamodeld */,
+			);
+			path = frago;
+			sourceTree = "<group>";
+		};
+		82AB357D1F1DF2F900C6F661 /* fragoTests */ = {
+			isa = PBXGroup;
+			children = (
+				82AB357E1F1DF2F900C6F661 /* fragoTests.swift */,
+				82AB35801F1DF2F900C6F661 /* Info.plist */,
+			);
+			path = fragoTests;
+			sourceTree = "<group>";
+		};
+		82AB35881F1DF2F900C6F661 /* fragoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				82AB35891F1DF2F900C6F661 /* fragoUITests.swift */,
+				82AB358B1F1DF2F900C6F661 /* Info.plist */,
+			);
+			path = fragoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		82AB35651F1DF2F800C6F661 /* frago */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82AB358E1F1DF2F900C6F661 /* Build configuration list for PBXNativeTarget "frago" */;
+			buildPhases = (
+				82AB35621F1DF2F800C6F661 /* Sources */,
+				82AB35631F1DF2F800C6F661 /* Frameworks */,
+				82AB35641F1DF2F800C6F661 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = frago;
+			productName = frago;
+			productReference = 82AB35661F1DF2F800C6F661 /* frago.app */;
+			productType = "com.apple.product-type.application";
+		};
+		82AB35791F1DF2F900C6F661 /* fragoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82AB35911F1DF2F900C6F661 /* Build configuration list for PBXNativeTarget "fragoTests" */;
+			buildPhases = (
+				82AB35761F1DF2F900C6F661 /* Sources */,
+				82AB35771F1DF2F900C6F661 /* Frameworks */,
+				82AB35781F1DF2F900C6F661 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82AB357C1F1DF2F900C6F661 /* PBXTargetDependency */,
+			);
+			name = fragoTests;
+			productName = fragoTests;
+			productReference = 82AB357A1F1DF2F900C6F661 /* fragoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		82AB35841F1DF2F900C6F661 /* fragoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82AB35941F1DF2F900C6F661 /* Build configuration list for PBXNativeTarget "fragoUITests" */;
+			buildPhases = (
+				82AB35811F1DF2F900C6F661 /* Sources */,
+				82AB35821F1DF2F900C6F661 /* Frameworks */,
+				82AB35831F1DF2F900C6F661 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82AB35871F1DF2F900C6F661 /* PBXTargetDependency */,
+			);
+			name = fragoUITests;
+			productName = fragoUITests;
+			productReference = 82AB35851F1DF2F900C6F661 /* fragoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		82AB355E1F1DF2F800C6F661 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = avi.im;
+				TargetAttributes = {
+					82AB35651F1DF2F800C6F661 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					82AB35791F1DF2F900C6F661 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 82AB35651F1DF2F800C6F661;
+					};
+					82AB35841F1DF2F900C6F661 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 82AB35651F1DF2F800C6F661;
+					};
+				};
+			};
+			buildConfigurationList = 82AB35611F1DF2F800C6F661 /* Build configuration list for PBXProject "frago" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 82AB355D1F1DF2F800C6F661;
+			productRefGroup = 82AB35671F1DF2F800C6F661 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				82AB35651F1DF2F800C6F661 /* frago */,
+				82AB35791F1DF2F900C6F661 /* fragoTests */,
+				82AB35841F1DF2F900C6F661 /* fragoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		82AB35641F1DF2F800C6F661 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82AB35711F1DF2F800C6F661 /* Assets.xcassets in Resources */,
+				82AB35741F1DF2F900C6F661 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82AB35781F1DF2F900C6F661 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82AB35831F1DF2F900C6F661 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		82AB35621F1DF2F800C6F661 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82AB356F1F1DF2F800C6F661 /* frago.xcdatamodeld in Sources */,
+				82AB356C1F1DF2F800C6F661 /* ViewController.swift in Sources */,
+				82AB356A1F1DF2F800C6F661 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82AB35761F1DF2F900C6F661 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82AB357F1F1DF2F900C6F661 /* fragoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82AB35811F1DF2F900C6F661 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82AB358A1F1DF2F900C6F661 /* fragoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		82AB357C1F1DF2F900C6F661 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82AB35651F1DF2F800C6F661 /* frago */;
+			targetProxy = 82AB357B1F1DF2F900C6F661 /* PBXContainerItemProxy */;
+		};
+		82AB35871F1DF2F900C6F661 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82AB35651F1DF2F800C6F661 /* frago */;
+			targetProxy = 82AB35861F1DF2F900C6F661 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		82AB35721F1DF2F900C6F661 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82AB35731F1DF2F900C6F661 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		82AB358C1F1DF2F900C6F661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		82AB358D1F1DF2F900C6F661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		82AB358F1F1DF2F900C6F661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = frago/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.avi.frago;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		82AB35901F1DF2F900C6F661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = frago/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.avi.frago;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		82AB35921F1DF2F900C6F661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = fragoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.avi.fragoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/frago.app/Contents/MacOS/frago";
+			};
+			name = Debug;
+		};
+		82AB35931F1DF2F900C6F661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = fragoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.avi.fragoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/frago.app/Contents/MacOS/frago";
+			};
+			name = Release;
+		};
+		82AB35951F1DF2F900C6F661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = fragoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.avi.fragoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = frago;
+			};
+			name = Debug;
+		};
+		82AB35961F1DF2F900C6F661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = fragoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.avi.fragoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = frago;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		82AB35611F1DF2F800C6F661 /* Build configuration list for PBXProject "frago" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82AB358C1F1DF2F900C6F661 /* Debug */,
+				82AB358D1F1DF2F900C6F661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82AB358E1F1DF2F900C6F661 /* Build configuration list for PBXNativeTarget "frago" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82AB358F1F1DF2F900C6F661 /* Debug */,
+				82AB35901F1DF2F900C6F661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		82AB35911F1DF2F900C6F661 /* Build configuration list for PBXNativeTarget "fragoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82AB35921F1DF2F900C6F661 /* Debug */,
+				82AB35931F1DF2F900C6F661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		82AB35941F1DF2F900C6F661 /* Build configuration list for PBXNativeTarget "fragoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82AB35951F1DF2F900C6F661 /* Debug */,
+				82AB35961F1DF2F900C6F661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		82AB356D1F1DF2F800C6F661 /* frago.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				82AB356E1F1DF2F800C6F661 /* frago.xcdatamodel */,
+			);
+			currentVersion = 82AB356E1F1DF2F800C6F661 /* frago.xcdatamodel */;
+			path = frago.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 82AB355E1F1DF2F800C6F661 /* Project object */;
+}
