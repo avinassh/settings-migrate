@@ -16,8 +16,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
 
     var names: [String] = ["Python", "Go", "Swift"]
-    var targetLow: [String] = ["3.6", "1.9", "3"]
-    var targetHigh: [String] = ["2.9", "1.6", "1"]
+    var targetLow: [Decimal] = [3.6, 1.9, 3]
+    var targetHigh: [Decimal] = [2.9, 1.6, 1]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +36,8 @@ class ViewController: NSViewController {
 
     @IBAction func onSubmit(_ sender: NSButton) {
         let name = nameTextField.stringValue
-        let tgLow = targetLowTextField.stringValue
-        let tgHigh = targetHighTextField.stringValue
+        let tgLow = getDecimal(string: targetLowTextField.stringValue)
+        let tgHigh = getDecimal(string: targetHighTextField.stringValue)
         names.append(name)
         targetLow.append(tgLow)
         targetHigh.append(tgHigh)
@@ -66,10 +66,10 @@ extension ViewController: NSTableViewDelegate {
             
         } else if tableColumn == tableView.tableColumns[1] {
             cellIdentifier = "TargetLowCellID"
-            value = targetLow[row]
+            value = String(describing: targetLow[row])
         } else if tableColumn == tableView.tableColumns[2] {
             cellIdentifier = "TargetHighCellID"
-            value = targetHigh[row]
+            value = String(describing: targetHigh[row])
         }
         
 
@@ -79,4 +79,11 @@ extension ViewController: NSTableViewDelegate {
         }
         return nil
     }
+}
+
+
+func getDecimal(string: String) -> Decimal {
+    let formatter = NumberFormatter()
+    formatter.generatesDecimalNumbers = true
+    return formatter.number(from: string) as? Decimal ?? 0
 }
