@@ -743,7 +743,7 @@
                                                                         </tableCellView>
                                                                     </prototypeCellViews>
                                                                 </tableColumn>
-                                                                <tableColumn identifier="ValueCellID" width="85" minWidth="40" maxWidth="1000" id="vbv-26-3xP">
+                                                                <tableColumn identifier="TargetLowCellID" width="85" minWidth="40" maxWidth="1000" id="vbv-26-3xP">
                                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                         <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -780,7 +780,7 @@
                                                                         </tableCellView>
                                                                     </prototypeCellViews>
                                                                 </tableColumn>
-                                                                <tableColumn identifier="" width="85" minWidth="10" maxWidth="3.4028234663852886e+38" id="uLZ-Pq-lRY">
+                                                                <tableColumn identifier="TargetHighCellID" width="85" minWidth="10" maxWidth="3.4028234663852886e+38" id="uLZ-Pq-lRY">
                                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                                         <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -995,6 +995,9 @@
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="onSubmit:" target="XfG-lQ-9wD" id="Hvb-0E-fBx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -1029,7 +1032,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nameTextField" destination="D4D-Zz-wX9" id="FFG-ma-w6v"/>
                         <outlet property="tableView" destination="bcR-TE-xlT" id="Rxt-mN-7C9"/>
+                        <outlet property="targetHighTextField" destination="MaF-yd-SZT" id="Nfh-Mf-NBf"/>
+                        <outlet property="targetLowTextField" destination="Kri-a3-oNy" id="ok5-bd-zLp"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

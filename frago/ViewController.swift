@@ -10,12 +10,14 @@ import Cocoa
 
 class ViewController: NSViewController {
 
-    // @IBOutlet weak var nameTextField: NSTextField!
-    // @IBOutlet weak var targetLowTextField: NSTextField!
+    @IBOutlet weak var nameTextField: NSTextField!
+    @IBOutlet weak var targetLowTextField: NSTextField!
+    @IBOutlet weak var targetHighTextField: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
 
     var names: [String] = ["Python", "Go", "Swift"]
-    var values: [String] = ["3.6", "1.9", "3"]
+    var targetLow: [String] = ["3.6", "1.9", "3"]
+    var targetHigh: [String] = ["2.9", "1.6", "1"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,8 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func onSubmit(_ sender: NSButton) {
+    }
 //    @IBAction func onSubmit(_ sender: NSButton) {
 //        let name = nameTextField.stringValue
 //        _ = targetLowTextField.intValue
@@ -61,9 +65,13 @@ extension ViewController: NSTableViewDelegate {
             value = names[row]
             
         } else if tableColumn == tableView.tableColumns[1] {
-            cellIdentifier = "ValueCellID"
-            value = values[row]
+            cellIdentifier = "TargetLowCellID"
+            value = targetLow[row]
+        } else if tableColumn == tableView.tableColumns[2] {
+            cellIdentifier = "TargetHighCellID"
+            value = targetHigh[row]
         }
+        
 
         if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
             cell.textField?.stringValue = value
