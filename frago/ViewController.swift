@@ -12,11 +12,17 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var nameTextField: NSTextField!
     @IBOutlet weak var targetLowTextField: NSTextField!
+    @IBOutlet weak var tableView: NSTableView!
+
+    var names: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.target = self
+
     }
 
     override var representedObject: Any? {
@@ -27,8 +33,33 @@ class ViewController: NSViewController {
 
     @IBAction func onSubmit(_ sender: NSButton) {
         let name = nameTextField.stringValue
-        let targetLow = targetLowTextField.intValue
-        print(name, targetLow)
+        _ = targetLowTextField.intValue
+        names.append(name)
+        print(name)
+        tableView.reloadData()
+    }
+
+}
+
+extension ViewController: NSTableViewDataSource {
+
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return names.count
     }
 }
 
+extension ViewController: NSTableViewDelegate {
+
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+
+        print("I was here")
+
+        let cellIdentifier = "NameCellID"
+
+        if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
+            cell.textField?.stringValue = names[row]
+            return cell
+        }
+        return nil
+    }
+}
