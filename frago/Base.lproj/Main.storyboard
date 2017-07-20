@@ -703,7 +703,7 @@
                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn width="116" minWidth="40" maxWidth="1000" id="tEq-Jf-m7F">
+                                                        <tableColumn identifier="NameCellID" width="116" minWidth="40" maxWidth="1000" id="tEq-Jf-m7F">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -805,6 +805,9 @@
                             <constraint firstAttribute="trailing" secondItem="T6P-eO-keQ" secondAttribute="trailing" id="u4f-TJ-XWg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="bcR-TE-xlT" id="Rxt-mN-7C9"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

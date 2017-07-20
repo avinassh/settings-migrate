@@ -10,11 +10,11 @@ import Cocoa
 
 class ViewController: NSViewController {
 
-    @IBOutlet weak var nameTextField: NSTextField!
-    @IBOutlet weak var targetLowTextField: NSTextField!
+    // @IBOutlet weak var nameTextField: NSTextField!
+    // @IBOutlet weak var targetLowTextField: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
 
-    var names: [String] = []
+    var names: [String] = ["Python", "Go", "Swift"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +31,13 @@ class ViewController: NSViewController {
         }
     }
 
-    @IBAction func onSubmit(_ sender: NSButton) {
-        let name = nameTextField.stringValue
-        _ = targetLowTextField.intValue
-        names.append(name)
-        print(name)
-        tableView.reloadData()
-    }
+//    @IBAction func onSubmit(_ sender: NSButton) {
+//        let name = nameTextField.stringValue
+//        _ = targetLowTextField.intValue
+//        names.append(name)
+//        print(name)
+//        tableView.reloadData()
+//    }
 
 }
 
@@ -51,8 +51,6 @@ extension ViewController: NSTableViewDataSource {
 extension ViewController: NSTableViewDelegate {
 
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-
-        print("I was here")
 
         let cellIdentifier = "NameCellID"
 
