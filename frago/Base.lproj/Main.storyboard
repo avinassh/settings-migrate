@@ -736,7 +736,7 @@
                                                                 </tableCellView>
                                                             </prototypeCellViews>
                                                         </tableColumn>
-                                                        <tableColumn width="356" minWidth="40" maxWidth="1000" id="vbv-26-3xP">
+                                                        <tableColumn identifier="ValueCellID" width="356" minWidth="40" maxWidth="1000" id="vbv-26-3xP">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>

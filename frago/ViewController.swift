@@ -15,6 +15,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
 
     var names: [String] = ["Python", "Go", "Swift"]
+    var values: [String] = ["3.6", "1.9", "3"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,11 +52,21 @@ extension ViewController: NSTableViewDataSource {
 extension ViewController: NSTableViewDelegate {
 
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-
-        let cellIdentifier = "NameCellID"
+        
+        var cellIdentifier: String = ""
+        var value: String = ""
+        
+        if tableColumn == tableView.tableColumns[0] {
+            cellIdentifier = "NameCellID"
+            value = names[row]
+            
+        } else if tableColumn == tableView.tableColumns[1] {
+            cellIdentifier = "ValueCellID"
+            value = values[row]
+        }
 
         if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
-            cell.textField?.stringValue = names[row]
+            cell.textField?.stringValue = value
             return cell
         }
         return nil
