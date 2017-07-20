@@ -35,14 +35,14 @@ class ViewController: NSViewController {
     }
 
     @IBAction func onSubmit(_ sender: NSButton) {
+        let name = nameTextField.stringValue
+        let tgLow = targetLowTextField.stringValue
+        let tgHigh = targetHighTextField.stringValue
+        names.append(name)
+        targetLow.append(tgLow)
+        targetHigh.append(tgHigh)
+        tableView.reloadData()
     }
-//    @IBAction func onSubmit(_ sender: NSButton) {
-//        let name = nameTextField.stringValue
-//        _ = targetLowTextField.intValue
-//        names.append(name)
-//        print(name)
-//        tableView.reloadData()
-//    }
 
 }
 
