@@ -52,6 +52,10 @@ class ViewController: NSViewController {
             tableView.insertRows(at: indexSet, withAnimation: .effectFade)
         }
     }
+
+    @IBAction func delete(_ sender: AnyObject) {
+        print("Delete was hit")
+    }
 }
 
 extension ViewController: NSTableViewDataSource {
@@ -88,6 +92,7 @@ extension ViewController: NSTableViewDelegate {
         }
         return nil
     }
+
 }
 
 func getDouble(string: String) -> Double {
