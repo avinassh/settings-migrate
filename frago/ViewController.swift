@@ -35,15 +35,11 @@ class ViewController: NSViewController {
     }
 
     @IBAction func onSubmit(_ sender: NSButton) {
-        let name = nameTextField.stringValue
-        let tgLow = getDouble(string: targetLowTextField.stringValue)
-        let tgHigh = getDouble(string: targetHighTextField.stringValue)
-
-        let stock = Stock(name: name)
+        let stock = Stock(name: nameTextField.stringValue)
         stock.createdOn = Int64(Date().timeIntervalSince1970)
         stock.updatedOn = Int64(Date().timeIntervalSince1970)
-        stock.targetLowPrice = tgLow
-        stock.targetHighPrice = tgHigh
+        stock.targetLowPrice = getDouble(string: targetLowTextField.stringValue)
+        stock.targetHighPrice = getDouble(string: targetHighTextField.stringValue)
         stock.currentPrice = 0
         stock.intialPrice = 0
 
