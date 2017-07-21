@@ -9,8 +9,8 @@
 import Foundation
 
 class Stock {
-    let name: String?
-    let createdOn: Int64
+    let name: String
+    var createdOn: Int64
     var updatedOn: Int64
     var targetLowPrice: Double
     var targetHighPrice: Double
