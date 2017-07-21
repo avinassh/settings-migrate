@@ -14,18 +14,18 @@ class ViewController: NSViewController {
     @IBOutlet weak var targetLowTextField: NSTextField!
     @IBOutlet weak var targetHighTextField: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var timeStampLabel: NSTextField!
 
-    var names: [String] = ["Python", "Go", "Swift"]
-    var targetLow: [Decimal] = [3.6, 1.9, 3]
-    var targetHigh: [Decimal] = [2.9, 1.6, 1]
+    var stocks = [Stock]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        stocks = StocksDB.instance.getStocks()
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.target = self
-
     }
 
     override var representedObject: Any? {
@@ -35,21 +35,43 @@ class ViewController: NSViewController {
     }
 
     @IBAction func onSubmit(_ sender: NSButton) {
-        let name = nameTextField.stringValue
-        let tgLow = getDecimal(string: targetLowTextField.stringValue)
-        let tgHigh = getDecimal(string: targetHighTextField.stringValue)
-        names.append(name)
-        targetLow.append(tgLow)
-        targetHigh.append(tgHigh)
-        tableView.reloadData()
+        let stock = Stock(name: nameTextField.stringValue)
+        stock.createdOn = Int64(Date().timeIntervalSince1970)
+        stock.updatedOn = Int64(Date().timeIntervalSince1970)
+        stock.targetLowPrice = getDouble(string: targetLowTextField.stringValue)
+        stock.targetHighPrice = getDouble(string: targetHighTextField.stringValue)
+        stock.currentPrice = 0
+        stock.intialPrice = 0
+
+        if StocksDB.instance.addStock(stock: stock) != nil {
+            stocks.append(stock)
+            let indexSet = NSIndexSet(index: stocks.count-1) as IndexSet
+            tableView.insertRows(at: indexSet, withAnimation: .effectFade)
+        }
     }
 
+    @IBAction func delete(_ sender: AnyObject) {
+        // the value of `tableView.selectedRow` will be -1 if row on tableview is 
+        // selected and delete key is pressed
+        if tableView.selectedRow <= -1 {
+            return
+        }
+        let stock = stocks.remove(at: tableView.selectedRow)
+        if StocksDB.instance.removeStock(stock: stock) {
+            let indexSet = NSIndexSet(index: tableView.selectedRow) as IndexSet
+            tableView.removeRows(at: indexSet, withAnimation: [])
+        } else {
+            // removal failed for some reason 🤔
+            // put the item back in array
+            stocks.insert(stock, at: tableView.selectedRow)
+        }
+    }
 }
 
 extension ViewController: NSTableViewDataSource {
 
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return names.count
+        return stocks.count
     }
 }
 
@@ -59,19 +81,20 @@ extension ViewController: NSTableViewDelegate {
         
         var cellIdentifier: String = ""
         var value: String = ""
-        
+        let stock = stocks[row]
+
         if tableColumn == tableView.tableColumns[0] {
             cellIdentifier = "NameCellID"
-            value = names[row]
-            
-        } else if tableColumn == tableView.tableColumns[1] {
+            value = stock.name
+        }
+        else if tableColumn == tableView.tableColumns[1] {
             cellIdentifier = "TargetLowCellID"
-            value = String(describing: targetLow[row])
+            value = String(describing: stock.targetLowPrice)
         } else if tableColumn == tableView.tableColumns[2] {
             cellIdentifier = "TargetHighCellID"
-            value = String(describing: targetHigh[row])
+            value = String(describing: stock.targetHighPrice)
         }
-        
+
 
         if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
             cell.textField?.stringValue = value
@@ -79,11 +102,27 @@ extension ViewController: NSTableViewDelegate {
         }
         return nil
     }
+
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        if tableView.selectedRow <= -1 {
+            timeStampLabel.stringValue = ""
+            return
+        }
+        let stock = stocks[tableView.selectedRow]
+        let createdOn = NSDate(timeIntervalSince1970: TimeInterval(stock.createdOn))
+        let updatedOn = NSDate(timeIntervalSince1970: TimeInterval(stock.updatedOn))
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MMM-YYYY, hh:mm a"
+        let createdOnString = formatter.string(from: createdOn as Date)
+        let updatedOnString = formatter.string(from: updatedOn as Date)
+        timeStampLabel.stringValue = "Added on: \(createdOnString), Last updated on: \(updatedOnString)"
+    }
+
+
 }
 
-
-func getDecimal(string: String) -> Decimal {
+func getDouble(string: String) -> Double {
     let formatter = NumberFormatter()
-    formatter.generatesDecimalNumbers = true
-    return formatter.number(from: string) as? Decimal ?? 0
+    return formatter.number(from: string) as? Double ?? 0
 }

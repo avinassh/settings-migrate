@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		821E44C51F2224E200BA2488 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821E44C41F2224E200BA2488 /* Models.swift */; };
+		821E44C71F22315E00BA2488 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821E44C61F22315E00BA2488 /* Stock.swift */; };
 		82AB356A1F1DF2F800C6F661 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AB35691F1DF2F800C6F661 /* AppDelegate.swift */; };
 		82AB356C1F1DF2F800C6F661 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AB356B1F1DF2F800C6F661 /* ViewController.swift */; };
 		82AB356F1F1DF2F800C6F661 /* frago.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82AB356D1F1DF2F800C6F661 /* frago.xcdatamodeld */; };
@@ -14,6 +16,9 @@
 		82AB35741F1DF2F900C6F661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AB35721F1DF2F900C6F661 /* Main.storyboard */; };
 		82AB357F1F1DF2F900C6F661 /* fragoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AB357E1F1DF2F900C6F661 /* fragoTests.swift */; };
 		82AB358A1F1DF2F900C6F661 /* fragoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AB35891F1DF2F900C6F661 /* fragoUITests.swift */; };
+		B94E4CC0268B03AFEF862083 /* Pods_fragoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B00435FBF802FBB98308E3 /* Pods_fragoUITests.framework */; };
+		C3F9946B6AF2045DF9D3A80D /* Pods_frago.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F54E5D997281CD9BB0B2AEE /* Pods_frago.framework */; };
+		F9B3422E4073F53CA76E0D30 /* Pods_fragoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906F90CD4096E13C5DB63AF9 /* Pods_fragoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F54E5D997281CD9BB0B2AEE /* Pods_frago.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frago.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25B00435FBF802FBB98308E3 /* Pods_fragoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fragoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48774805192C277AAC60F3E5 /* Pods-frago.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frago.release.xcconfig"; path = "Pods/Target Support Files/Pods-frago/Pods-frago.release.xcconfig"; sourceTree = "<group>"; };
+		65CECCCB59449872E5E24CB6 /* Pods-fragoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fragoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fragoTests/Pods-fragoTests.release.xcconfig"; sourceTree = "<group>"; };
+		6DC89C82A288FFEAFADAC18B /* Pods-frago.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frago.debug.xcconfig"; path = "Pods/Target Support Files/Pods-frago/Pods-frago.debug.xcconfig"; sourceTree = "<group>"; };
+		821E44C41F2224E200BA2488 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		821E44C61F22315E00BA2488 /* Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		82AB35661F1DF2F800C6F661 /* frago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frago.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82AB35691F1DF2F800C6F661 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82AB356B1F1DF2F800C6F661 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +59,10 @@
 		82AB35851F1DF2F900C6F661 /* fragoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fragoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82AB35891F1DF2F900C6F661 /* fragoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fragoUITests.swift; sourceTree = "<group>"; };
 		82AB358B1F1DF2F900C6F661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EAD25F7CE10B50930D9761B /* Pods-fragoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fragoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fragoUITests/Pods-fragoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		906F90CD4096E13C5DB63AF9 /* Pods_fragoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fragoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2C0D826CD5263BE8B64919D /* Pods-fragoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fragoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fragoTests/Pods-fragoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C6F4A5C55B447DE10009AD29 /* Pods-fragoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fragoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fragoUITests/Pods-fragoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F9946B6AF2045DF9D3A80D /* Pods_frago.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B3422E4073F53CA76E0D30 /* Pods_fragoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94E4CC0268B03AFEF862083 /* Pods_fragoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +100,8 @@
 				82AB357D1F1DF2F900C6F661 /* fragoTests */,
 				82AB35881F1DF2F900C6F661 /* fragoUITests */,
 				82AB35671F1DF2F800C6F661 /* Products */,
+				F03C6BAC61858A0964FE21BE /* Pods */,
+				F78475C8B93A2E7FB7234188 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +120,8 @@
 			children = (
 				82AB35691F1DF2F800C6F661 /* AppDelegate.swift */,
 				82AB356B1F1DF2F800C6F661 /* ViewController.swift */,
+				821E44C61F22315E00BA2488 /* Stock.swift */,
+				821E44C41F2224E200BA2488 /* Models.swift */,
 				82AB35701F1DF2F800C6F661 /* Assets.xcassets */,
 				82AB35721F1DF2F900C6F661 /* Main.storyboard */,
 				82AB35751F1DF2F900C6F661 /* Info.plist */,
@@ -125,6 +148,29 @@
 			path = fragoUITests;
 			sourceTree = "<group>";
 		};
+		F03C6BAC61858A0964FE21BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DC89C82A288FFEAFADAC18B /* Pods-frago.debug.xcconfig */,
+				48774805192C277AAC60F3E5 /* Pods-frago.release.xcconfig */,
+				B2C0D826CD5263BE8B64919D /* Pods-fragoTests.debug.xcconfig */,
+				65CECCCB59449872E5E24CB6 /* Pods-fragoTests.release.xcconfig */,
+				8EAD25F7CE10B50930D9761B /* Pods-fragoUITests.debug.xcconfig */,
+				C6F4A5C55B447DE10009AD29 /* Pods-fragoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F78475C8B93A2E7FB7234188 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F54E5D997281CD9BB0B2AEE /* Pods_frago.framework */,
+				906F90CD4096E13C5DB63AF9 /* Pods_fragoTests.framework */,
+				25B00435FBF802FBB98308E3 /* Pods_fragoUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82AB358E1F1DF2F900C6F661 /* Build configuration list for PBXNativeTarget "frago" */;
 			buildPhases = (
+				A8B22235C2F6C94BA43347A5 /* [CP] Check Pods Manifest.lock */,
 				82AB35621F1DF2F800C6F661 /* Sources */,
 				82AB35631F1DF2F800C6F661 /* Frameworks */,
 				82AB35641F1DF2F800C6F661 /* Resources */,
+				EA0E27F8ACF5647C99ADA25A /* [CP] Embed Pods Frameworks */,
+				94AC55D86B25CCD46DD74E3B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82AB35911F1DF2F900C6F661 /* Build configuration list for PBXNativeTarget "fragoTests" */;
 			buildPhases = (
+				CF73B5DB62715BC7532F24A9 /* [CP] Check Pods Manifest.lock */,
 				82AB35761F1DF2F900C6F661 /* Sources */,
 				82AB35771F1DF2F900C6F661 /* Frameworks */,
 				82AB35781F1DF2F900C6F661 /* Resources */,
+				3E44188C0A380B719EF0BA86 /* [CP] Embed Pods Frameworks */,
+				B413318BEFC1D11DC8416FEC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82AB35941F1DF2F900C6F661 /* Build configuration list for PBXNativeTarget "fragoUITests" */;
 			buildPhases = (
+				E83BB574CA1373CF65862D7C /* [CP] Check Pods Manifest.lock */,
 				82AB35811F1DF2F900C6F661 /* Sources */,
 				82AB35821F1DF2F900C6F661 /* Frameworks */,
 				82AB35831F1DF2F900C6F661 /* Resources */,
+				9664DC7B73A17245E2D1CD1D /* [CP] Embed Pods Frameworks */,
+				FE8B1F38999F9F4CD0BB980A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +308,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E44188C0A380B719EF0BA86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fragoTests/Pods-fragoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94AC55D86B25CCD46DD74E3B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-frago/Pods-frago-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9664DC7B73A17245E2D1CD1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fragoUITests/Pods-fragoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8B22235C2F6C94BA43347A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B413318BEFC1D11DC8416FEC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fragoTests/Pods-fragoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF73B5DB62715BC7532F24A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E83BB574CA1373CF65862D7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA0E27F8ACF5647C99ADA25A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-frago/Pods-frago-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE8B1F38999F9F4CD0BB980A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fragoUITests/Pods-fragoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		82AB35621F1DF2F800C6F661 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,6 +454,8 @@
 				82AB356F1F1DF2F800C6F661 /* frago.xcdatamodeld in Sources */,
 				82AB356C1F1DF2F800C6F661 /* ViewController.swift in Sources */,
 				82AB356A1F1DF2F800C6F661 /* AppDelegate.swift in Sources */,
+				821E44C71F22315E00BA2488 /* Stock.swift in Sources */,
+				821E44C51F2224E200BA2488 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +596,7 @@
 		};
 		82AB358F1F1DF2F900C6F661 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DC89C82A288FFEAFADAC18B /* Pods-frago.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -414,6 +610,7 @@
 		};
 		82AB35901F1DF2F900C6F661 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48774805192C277AAC60F3E5 /* Pods-frago.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -427,6 +624,7 @@
 		};
 		82AB35921F1DF2F900C6F661 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2C0D826CD5263BE8B64919D /* Pods-fragoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -442,6 +640,7 @@
 		};
 		82AB35931F1DF2F900C6F661 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65CECCCB59449872E5E24CB6 /* Pods-fragoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -457,6 +656,7 @@
 		};
 		82AB35951F1DF2F900C6F661 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EAD25F7CE10B50930D9761B /* Pods-fragoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -471,6 +671,7 @@
 		};
 		82AB35961F1DF2F900C6F661 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6F4A5C55B447DE10009AD29 /* Pods-fragoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -502,6 +703,7 @@
 				82AB35901F1DF2F900C6F661 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82AB35911F1DF2F900C6F661 /* Build configuration list for PBXNativeTarget "fragoTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +712,7 @@
 				82AB35931F1DF2F900C6F661 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82AB35941F1DF2F900C6F661 /* Build configuration list for PBXNativeTarget "fragoUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +721,7 @@
 				82AB35961F1DF2F900C6F661 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
