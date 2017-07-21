@@ -97,7 +97,9 @@ class StocksDB {
         do {
             for stock in try db!.prepare(self.stock_table) {
                 stocks.append(Stock(
-                    name: stock[name]))
+                    name: stock[name],
+                    createdOn: stock[createdOn],
+                    updatedOn: stock[updatedOn]))
             }
         } catch {
             print("Unable to fetch stocks from DB")
