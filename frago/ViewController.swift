@@ -59,7 +59,8 @@ class ViewController: NSViewController {
         if tableView.selectedRow > -1 {
             let stock = stocks.remove(at: tableView.selectedRow)
             StocksDB.instance.removeStock(stock: stock)
-            tableView.reloadData()
+            let indexSet = NSIndexSet(index: tableView.selectedRow) as IndexSet
+            tableView.removeRows(at: indexSet, withAnimation: [])
         }
     }
 }
