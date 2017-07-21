@@ -109,6 +109,7 @@ extension ViewController: NSTableViewDelegate {
 
     func tableViewSelectionDidChange(_ notification: Notification) {
         if tableView.selectedRow <= -1 {
+            timeStampLabel.stringValue = ""
             return
         }
         let stock = stocks[tableView.selectedRow]
@@ -121,6 +122,7 @@ extension ViewController: NSTableViewDelegate {
         let updatedOnString = formatter.string(from: updatedOn as Date)
         timeStampLabel.stringValue = "Added on: \(createdOnString), Last updated on: \(updatedOnString)"
     }
+
 
 }
 
