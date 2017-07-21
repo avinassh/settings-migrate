@@ -10,7 +10,7 @@ import SQLite
 
 class StocksDB {
 
-    private let stocks = Table("stocks")
+    private let stock_table = Table("stocks")
     private let name = Expression<String>("name")
     private let createdOn = Expression<Int64>("created_on")
     private let updatedOn = Expression<Int64>("updated_on")
@@ -45,7 +45,7 @@ class StocksDB {
     // creates tables if they not exist
     func initDB() {
         do {
-            try db!.run(stocks.create(ifNotExists: true) { table in
+            try db!.run(stock_table.create(ifNotExists: true) { table in
                 table.column(name, primaryKey: true)
                 table.column(createdOn)
                 table.column(updatedOn)
@@ -63,7 +63,7 @@ class StocksDB {
     func getStocks() -> [Stock] {
         var stocks = [Stock]()
         do {
-            for stock in try db!.prepare(self.stocks) {
+            for stock in try db!.prepare(self.stock_table) {
                 stocks.append(Stock(
                     name: stock[name]))
             }
