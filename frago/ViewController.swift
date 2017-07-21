@@ -45,13 +45,11 @@ class ViewController: NSViewController {
         stock.targetHighPrice = tgHigh
         stock.currentPrice = 0
         stock.intialPrice = 0
-        StocksDB.instance.addStock(stock: stock)
-
-        stocks.append(stock)
-
-        tableView.reloadData()
+        if StocksDB.instance.addStock(stock: stock) != nil {
+            stocks.append(stock)
+            tableView.reloadData()
+        }
     }
-
 }
 
 extension ViewController: NSTableViewDataSource {
