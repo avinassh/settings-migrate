@@ -15,17 +15,16 @@ class ViewController: NSViewController {
     @IBOutlet weak var targetHighTextField: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
 
-    var names: [String] = ["Python", "Go", "Swift"]
-    var targetLow: [Decimal] = [3.6, 1.9, 3]
-    var targetHigh: [Decimal] = [2.9, 1.6, 1]
+    var stocks = [Stock]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        stocks = StocksDB.instance.getStocks()
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.target = self
-
     }
 
     override var representedObject: Any? {
@@ -38,9 +37,18 @@ class ViewController: NSViewController {
         let name = nameTextField.stringValue
         let tgLow = getDecimal(string: targetLowTextField.stringValue)
         let tgHigh = getDecimal(string: targetHighTextField.stringValue)
-        names.append(name)
-        targetLow.append(tgLow)
-        targetHigh.append(tgHigh)
+
+        let stock = Stock(name: name)
+        stock.createdOn = 0
+        stock.updatedOn = 0
+        stock.targetLowPrice = 0
+        stock.targetHighPrice = 0
+        stock.currentPrice = 0
+        stock.intialPrice = 0
+        StocksDB.instance.addStock(stock: stock)
+
+        stocks.append(stock)
+
         tableView.reloadData()
     }
 
@@ -49,7 +57,7 @@ class ViewController: NSViewController {
 extension ViewController: NSTableViewDataSource {
 
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return names.count
+        return stocks.count
     }
 }
 
@@ -59,19 +67,20 @@ extension ViewController: NSTableViewDelegate {
         
         var cellIdentifier: String = ""
         var value: String = ""
-        
+        let stock = stocks[row]
+
         if tableColumn == tableView.tableColumns[0] {
             cellIdentifier = "NameCellID"
-            value = names[row]
-            
-        } else if tableColumn == tableView.tableColumns[1] {
-            cellIdentifier = "TargetLowCellID"
-            value = String(describing: targetLow[row])
-        } else if tableColumn == tableView.tableColumns[2] {
-            cellIdentifier = "TargetHighCellID"
-            value = String(describing: targetHigh[row])
+            value = stock.name
         }
-        
+//        else if tableColumn == tableView.tableColumns[1] {
+//            cellIdentifier = "TargetLowCellID"
+//            value = String(describing: targetLow[row])
+//        } else if tableColumn == tableView.tableColumns[2] {
+//            cellIdentifier = "TargetHighCellID"
+//            value = String(describing: targetHigh[row])
+//        }
+
 
         if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
             cell.textField?.stringValue = value
