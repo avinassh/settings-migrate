@@ -45,9 +45,11 @@ class ViewController: NSViewController {
         stock.targetHighPrice = tgHigh
         stock.currentPrice = 0
         stock.intialPrice = 0
+
         if StocksDB.instance.addStock(stock: stock) != nil {
             stocks.append(stock)
-            tableView.reloadData()
+            let indexSet = NSIndexSet(index: stocks.count-1) as IndexSet
+            tableView.insertRows(at: indexSet, withAnimation: .effectFade)
         }
     }
 }
