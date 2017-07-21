@@ -114,7 +114,7 @@ extension ViewController: NSTableViewDelegate {
         }
         let stock = stocks[tableView.selectedRow]
         let createdOn = NSDate(timeIntervalSince1970: TimeInterval(stock.createdOn))
-        let updatedOn = NSDate(timeIntervalSince1970: TimeInterval(stock.createdOn))
+        let updatedOn = NSDate(timeIntervalSince1970: TimeInterval(stock.updatedOn))
 
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MMM-YYYY, hh:mm a"
