@@ -35,14 +35,14 @@ class ViewController: NSViewController {
 
     @IBAction func onSubmit(_ sender: NSButton) {
         let name = nameTextField.stringValue
-        let tgLow = getDecimal(string: targetLowTextField.stringValue)
-        let tgHigh = getDecimal(string: targetHighTextField.stringValue)
+        let tgLow = getDouble(string: targetLowTextField.stringValue)
+        let tgHigh = getDouble(string: targetHighTextField.stringValue)
 
         let stock = Stock(name: name)
         stock.createdOn = 0
         stock.updatedOn = 0
-        stock.targetLowPrice = 0
-        stock.targetHighPrice = 0
+        stock.targetLowPrice = tgLow
+        stock.targetHighPrice = tgHigh
         stock.currentPrice = 0
         stock.intialPrice = 0
         StocksDB.instance.addStock(stock: stock)
@@ -73,13 +73,13 @@ extension ViewController: NSTableViewDelegate {
             cellIdentifier = "NameCellID"
             value = stock.name
         }
-//        else if tableColumn == tableView.tableColumns[1] {
-//            cellIdentifier = "TargetLowCellID"
-//            value = String(describing: targetLow[row])
-//        } else if tableColumn == tableView.tableColumns[2] {
-//            cellIdentifier = "TargetHighCellID"
-//            value = String(describing: targetHigh[row])
-//        }
+        else if tableColumn == tableView.tableColumns[1] {
+            cellIdentifier = "TargetLowCellID"
+            value = String(describing: stock.targetLowPrice)
+        } else if tableColumn == tableView.tableColumns[2] {
+            cellIdentifier = "TargetHighCellID"
+            value = String(describing: stock.targetHighPrice)
+        }
 
 
         if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
@@ -90,9 +90,7 @@ extension ViewController: NSTableViewDelegate {
     }
 }
 
-
-func getDecimal(string: String) -> Decimal {
+func getDouble(string: String) -> Double {
     let formatter = NumberFormatter()
-    formatter.generatesDecimalNumbers = true
-    return formatter.number(from: string) as? Decimal ?? 0
+    return formatter.number(from: string) as? Double ?? 0
 }
