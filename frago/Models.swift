@@ -59,6 +59,26 @@ class StocksDB {
         }
     }
 
+    // Add a stock to DB
+    func addStock(stock: Stock) -> Int64? {
+        do {
+            let insert = stock_table.insert(
+                name <- stock.name,
+                createdOn <- stock.createdOn,
+                updatedOn <- stock.updatedOn,
+                targetLowPrice <- stock.targetLowPrice,
+                targetHighPrice <- stock.targetHighPrice,
+                intialPrice <- stock.intialPrice,
+                currentPrice <- stock.currentPrice)
+            let id = try db!.run(insert)
+            print(id)
+            return id
+        } catch {
+            print("Adding a new stock failed: \(error)")
+            return nil
+        }
+    }
+
     // returns all stocks
     func getStocks() -> [Stock] {
         var stocks = [Stock]()
