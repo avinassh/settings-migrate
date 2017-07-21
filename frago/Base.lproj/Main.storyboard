@@ -1026,6 +1026,15 @@ CA
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIG-pw-Zh7">
+                                <rect key="frame" x="18" y="1" width="487" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="6dH-bJ-w01">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="T6P-eO-keQ" secondAttribute="trailing" id="04p-n8-9Jo"/>
@@ -1039,11 +1048,12 @@ CA
                         <outlet property="tableView" destination="bcR-TE-xlT" id="Rxt-mN-7C9"/>
                         <outlet property="targetHighTextField" destination="MaF-yd-SZT" id="Nfh-Mf-NBf"/>
                         <outlet property="targetLowTextField" destination="Kri-a3-oNy" id="ok5-bd-zLp"/>
+                        <outlet property="timeStampLabel" destination="sIG-pw-Zh7" id="M5x-FX-cAx"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16" y="861"/>
+            <point key="canvasLocation" x="15.5" y="861"/>
         </scene>
     </scenes>
 </document>

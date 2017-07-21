@@ -14,6 +14,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var targetLowTextField: NSTextField!
     @IBOutlet weak var targetHighTextField: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var timeStampLabel: NSTextField!
 
     var stocks = [Stock]()
 
@@ -39,8 +40,8 @@ class ViewController: NSViewController {
         let tgHigh = getDouble(string: targetHighTextField.stringValue)
 
         let stock = Stock(name: name)
-        stock.createdOn = 0
-        stock.updatedOn = 0
+        stock.createdOn = Int64(Date().timeIntervalSince1970)
+        stock.updatedOn = Int64(Date().timeIntervalSince1970)
         stock.targetLowPrice = tgLow
         stock.targetHighPrice = tgHigh
         stock.currentPrice = 0
@@ -104,6 +105,21 @@ extension ViewController: NSTableViewDelegate {
             return cell
         }
         return nil
+    }
+
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        if tableView.selectedRow <= -1 {
+            return
+        }
+        let stock = stocks[tableView.selectedRow]
+        let createdOn = NSDate(timeIntervalSince1970: TimeInterval(stock.createdOn))
+        let updatedOn = NSDate(timeIntervalSince1970: TimeInterval(stock.createdOn))
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MMM-YYYY, hh:mm a"
+        let createdOnString = formatter.string(from: createdOn as Date)
+        let updatedOnString = formatter.string(from: updatedOn as Date)
+        timeStampLabel.stringValue = "Added on: \(createdOnString), Last updated on: \(updatedOnString)"
     }
 
 }
