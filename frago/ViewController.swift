@@ -56,11 +56,17 @@ class ViewController: NSViewController {
     @IBAction func delete(_ sender: AnyObject) {
         // the value of `tableView.selectedRow` will be -1 if row on tableview is 
         // selected and delete key is pressed
-        if tableView.selectedRow > -1 {
-            let stock = stocks.remove(at: tableView.selectedRow)
-            StocksDB.instance.removeStock(stock: stock)
+        if tableView.selectedRow <= -1 {
+            return
+        }
+        let stock = stocks.remove(at: tableView.selectedRow)
+        if StocksDB.instance.removeStock(stock: stock) {
             let indexSet = NSIndexSet(index: tableView.selectedRow) as IndexSet
             tableView.removeRows(at: indexSet, withAnimation: [])
+        } else {
+            // removal failed for some reason 🤔
+            // put the item back in array
+            stocks.insert(stock, at: tableView.selectedRow)
         }
     }
 }
