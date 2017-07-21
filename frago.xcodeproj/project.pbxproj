@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		821E44C51F2224E200BA2488 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821E44C41F2224E200BA2488 /* Models.swift */; };
+		821E44C71F22315E00BA2488 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821E44C61F22315E00BA2488 /* Stock.swift */; };
 		82AB356A1F1DF2F800C6F661 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AB35691F1DF2F800C6F661 /* AppDelegate.swift */; };
 		82AB356C1F1DF2F800C6F661 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AB356B1F1DF2F800C6F661 /* ViewController.swift */; };
 		82AB356F1F1DF2F800C6F661 /* frago.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82AB356D1F1DF2F800C6F661 /* frago.xcdatamodeld */; };
@@ -44,6 +45,7 @@
 		65CECCCB59449872E5E24CB6 /* Pods-fragoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fragoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fragoTests/Pods-fragoTests.release.xcconfig"; sourceTree = "<group>"; };
 		6DC89C82A288FFEAFADAC18B /* Pods-frago.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frago.debug.xcconfig"; path = "Pods/Target Support Files/Pods-frago/Pods-frago.debug.xcconfig"; sourceTree = "<group>"; };
 		821E44C41F2224E200BA2488 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		821E44C61F22315E00BA2488 /* Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		82AB35661F1DF2F800C6F661 /* frago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frago.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82AB35691F1DF2F800C6F661 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82AB356B1F1DF2F800C6F661 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				82AB35691F1DF2F800C6F661 /* AppDelegate.swift */,
 				82AB356B1F1DF2F800C6F661 /* ViewController.swift */,
+				821E44C61F22315E00BA2488 /* Stock.swift */,
 				821E44C41F2224E200BA2488 /* Models.swift */,
 				82AB35701F1DF2F800C6F661 /* Assets.xcassets */,
 				82AB35721F1DF2F900C6F661 /* Main.storyboard */,
@@ -451,6 +454,7 @@
 				82AB356F1F1DF2F800C6F661 /* frago.xcdatamodeld in Sources */,
 				82AB356C1F1DF2F800C6F661 /* ViewController.swift in Sources */,
 				82AB356A1F1DF2F800C6F661 /* AppDelegate.swift in Sources */,
+				821E44C71F22315E00BA2488 /* Stock.swift in Sources */,
 				821E44C51F2224E200BA2488 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
