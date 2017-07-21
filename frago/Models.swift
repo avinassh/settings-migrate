@@ -79,6 +79,19 @@ class StocksDB {
         }
     }
 
+    // Remove a stock from the DB
+    func removeStock(stock: Stock) -> Bool {
+        do {
+            let s = stock_table.filter(name == stock.name)
+            try db!.run(s.delete())
+            return true
+        } catch {
+            print("Removing the stock failed: \(error)")
+        }
+        return false
+    }
+
+
     // returns all stocks
     func getStocks() -> [Stock] {
         var stocks = [Stock]()
