@@ -54,9 +54,13 @@ class ViewController: NSViewController {
     }
 
     @IBAction func delete(_ sender: AnyObject) {
-        let stock = stocks.remove(at: tableView.selectedRow)
-        StocksDB.instance.removeStock(stock: stock)
-        tableView.reloadData()
+        // the value of `tableView.selectedRow` will be -1 if row on tableview is 
+        // selected and delete key is pressed
+        if tableView.selectedRow > -1 {
+            let stock = stocks.remove(at: tableView.selectedRow)
+            StocksDB.instance.removeStock(stock: stock)
+            tableView.reloadData()
+        }
     }
 }
 
