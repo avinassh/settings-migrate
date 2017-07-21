@@ -60,7 +60,16 @@ class StocksDB {
     }
 
     // returns all stocks
-    func getStocks() {
-
+    func getStocks() -> [Stock] {
+        var stocks = [Stock]()
+        do {
+            for stock in try db!.prepare(self.stocks) {
+                stocks.append(Stock(
+                    name: stock[name]))
+            }
+        } catch {
+            print("Unable to fetch stocks from DB")
+        }
+        return stocks
     }
 }
