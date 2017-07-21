@@ -71,7 +71,6 @@ class StocksDB {
                 intialPrice <- stock.intialPrice,
                 currentPrice <- stock.currentPrice)
             let id = try db!.run(insert)
-            print(id)
             return id
         } catch {
             print("Adding a new stock failed: \(error)")
