@@ -54,7 +54,9 @@ class ViewController: NSViewController {
     }
 
     @IBAction func delete(_ sender: AnyObject) {
-        print("Delete was hit")
+        let stock = stocks.remove(at: tableView.selectedRow)
+        StocksDB.instance.removeStock(stock: stock)
+        tableView.reloadData()
     }
 }
 
