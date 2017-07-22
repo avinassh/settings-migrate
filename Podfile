@@ -7,6 +7,7 @@ target 'frago' do
 
   # Pods for frago
   pod 'SQLite.swift', '~> 0.11.3'
+  pod 'Alamofire', '~> 4.4'
 
   target 'fragoTests' do
     inherit! :search_paths
