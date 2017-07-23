@@ -43,20 +43,32 @@ class GoogleStock {
 class GoogleFinance {
     private static let apiURL = "https://finance.google.com/finance/info?client=ig&q=NSE:"
 
-    func getStocks(name: String) {
-        Alamofire.request("https://finance.google.com/finance/info?client=ig&q=NSE:HDFC,ITC,CDSL").responseString { response in
-            if let str = response.result.value {
-                let index = str.index(str.startIndex, offsetBy: 3)
-                let jsonString = str.substring(from: index)
-                let jsonData = jsonString.data(using: .utf8)
-                let json = try? JSONSerialization.jsonObject(with: jsonData!, options: [])
-                if let array = json as? [Any] {
-                    for object in array {
-                        let obj = object as! [String: String]
-                        print("\(obj["t"]!): \(obj["l_fix"]!)")
+    static func addStock(name: String, targetLow: String, targetHigh: String,
+                         addViewController: AddViewController) {
+        Alamofire.request("https://finance.google.com/finance/info?client=ig&q=NSE:\(name)")
+            .responseString { response in
+
+                if response.response?.statusCode != 200 {
+                    addViewController.onFailure()
+                    return
+                }
+
+                if let str = response.result.value {
+                    let index = str.index(str.startIndex, offsetBy: 3)
+                    let jsonString = str.substring(from: index)
+                    let jsonData = jsonString.data(using: .utf8)
+                    var obj = [String: String]()
+                    let json = try? JSONSerialization.jsonObject(with: jsonData!, options: [])
+                    let array = json as? [Any]
+                    obj = array?[0] as! [String: String]
+                    let googleStock = GoogleStock(t: obj["t"]!, e: obj["e"]!,
+                                                  l_fix: obj["l_fix"]!, l_cur: obj["l_cur"]!)
+                    if googleStock.addtoDB(targetLow: targetLow, targetHigh: targetHigh) {
+                        addViewController.close()
+                    } else {
+                        addViewController.onFailure()
                     }
                 }
-            }
         }
     }
 }
