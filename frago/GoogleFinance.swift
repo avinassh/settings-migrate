@@ -49,7 +49,8 @@ class GoogleFinance {
             .responseString { response in
 
                 if response.response?.statusCode != 200 {
-                    addViewController.onFailure()
+                    let m = "Unable to find \(name) on NSE. Make sure symbol is valid."
+                    addViewController.onFailure(message: m)
                     return
                 }
 
@@ -66,7 +67,8 @@ class GoogleFinance {
                     if googleStock.addtoDB(targetLow: targetLow, targetHigh: targetHigh) {
                         addViewController.close()
                     } else {
-                        addViewController.onFailure()
+                        let m = "Symbol \(name) alreday exist. Try adding something new?"
+                        addViewController.onFailure(message: m)
                     }
                 }
         }

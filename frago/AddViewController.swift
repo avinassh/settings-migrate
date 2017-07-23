@@ -29,7 +29,13 @@ class AddViewController: NSViewController {
     }
 
     // if the response from Google is non 200, handle that here
-    func onFailure() {
+    func onFailure(message: String) {
+        let alert = NSAlert.init()
+        alert.messageText = "Adding a new stock failed"
+        alert.informativeText = message
+        alert.addButton(withTitle: "OK")
+        alert.runModal()
+
         self.resetTextFields()
         self.toggleButton()
     }
