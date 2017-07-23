@@ -1049,11 +1049,25 @@ CA
                         <outlet property="targetHighTextField" destination="MaF-yd-SZT" id="Nfh-Mf-NBf"/>
                         <outlet property="targetLowTextField" destination="Kri-a3-oNy" id="ok5-bd-zLp"/>
                         <outlet property="timeStampLabel" destination="sIG-pw-Zh7" id="M5x-FX-cAx"/>
+                        <segue destination="Riw-vN-Fow" kind="sheet" identifier="ShowAddView" id="9aT-fI-c13"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="15.5" y="861"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Yw8-ze-Vhu">
+            <objects>
+                <viewController id="Riw-vN-Fow" sceneMemberID="viewController">
+                    <view key="view" id="gX0-O0-8iN">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="Lkz-p8-b2A" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682" y="852"/>
         </scene>
     </scenes>
 </document>
