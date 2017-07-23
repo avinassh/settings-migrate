@@ -90,15 +90,19 @@ extension ViewController: NSTableViewDelegate {
         if tableColumn == tableView.tableColumns[0] {
             cellIdentifier = "NameCellID"
             value = stock.name
-        }
-        else if tableColumn == tableView.tableColumns[1] {
+        } else if tableColumn == tableView.tableColumns[1] {
+            cellIdentifier = "InitialPriceCellID"
+            value = String(describing: stock.intialPrice)
+        } else if tableColumn == tableView.tableColumns[2] {
+            cellIdentifier = "CurrentPriceCellID"
+            value = String(describing: stock.currentPrice)
+        } else if tableColumn == tableView.tableColumns[3] {
             cellIdentifier = "TargetLowCellID"
             value = String(describing: stock.targetLowPrice)
-        } else if tableColumn == tableView.tableColumns[2] {
+        } else if tableColumn == tableView.tableColumns[4] {
             cellIdentifier = "TargetHighCellID"
             value = String(describing: stock.targetHighPrice)
         }
-
 
         if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
             cell.textField?.stringValue = value
