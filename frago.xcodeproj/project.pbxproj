@@ -16,6 +16,7 @@
 		82AB35741F1DF2F900C6F661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AB35721F1DF2F900C6F661 /* Main.storyboard */; };
 		82AB357F1F1DF2F900C6F661 /* fragoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AB357E1F1DF2F900C6F661 /* fragoTests.swift */; };
 		82AB358A1F1DF2F900C6F661 /* fragoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AB35891F1DF2F900C6F661 /* fragoUITests.swift */; };
+		82D56FE01F23B7B800BAF0F5 /* GoogleFinance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D56FDF1F23B7B800BAF0F5 /* GoogleFinance.swift */; };
 		B94E4CC0268B03AFEF862083 /* Pods_fragoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B00435FBF802FBB98308E3 /* Pods_fragoUITests.framework */; };
 		C3F9946B6AF2045DF9D3A80D /* Pods_frago.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F54E5D997281CD9BB0B2AEE /* Pods_frago.framework */; };
 		F9B3422E4073F53CA76E0D30 /* Pods_fragoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906F90CD4096E13C5DB63AF9 /* Pods_fragoTests.framework */; };
@@ -59,6 +60,7 @@
 		82AB35851F1DF2F900C6F661 /* fragoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fragoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82AB35891F1DF2F900C6F661 /* fragoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fragoUITests.swift; sourceTree = "<group>"; };
 		82AB358B1F1DF2F900C6F661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82D56FDF1F23B7B800BAF0F5 /* GoogleFinance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleFinance.swift; sourceTree = "<group>"; };
 		8EAD25F7CE10B50930D9761B /* Pods-fragoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fragoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fragoUITests/Pods-fragoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		906F90CD4096E13C5DB63AF9 /* Pods_fragoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fragoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C0D826CD5263BE8B64919D /* Pods-fragoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fragoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fragoTests/Pods-fragoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				82AB356B1F1DF2F800C6F661 /* ViewController.swift */,
 				821E44C61F22315E00BA2488 /* Stock.swift */,
 				821E44C41F2224E200BA2488 /* Models.swift */,
+				82D56FDF1F23B7B800BAF0F5 /* GoogleFinance.swift */,
 				82AB35701F1DF2F800C6F661 /* Assets.xcassets */,
 				82AB35721F1DF2F900C6F661 /* Main.storyboard */,
 				82AB35751F1DF2F900C6F661 /* Info.plist */,
@@ -456,6 +459,7 @@
 				82AB356A1F1DF2F800C6F661 /* AppDelegate.swift in Sources */,
 				821E44C71F22315E00BA2488 /* Stock.swift in Sources */,
 				821E44C51F2224E200BA2488 /* Models.swift in Sources */,
+				82D56FE01F23B7B800BAF0F5 /* GoogleFinance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
