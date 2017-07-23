@@ -27,13 +27,14 @@ class Stock {
         self.intialPrice = 0.0
     }
 
-    init(name: String, createdOn: Int64, updatedOn: Int64) {
+    init(name: String, createdOn: Int64, updatedOn: Int64, targetLow: Double,
+         targetHigh: Double, currentPrice: Double, initialPrice: Double) {
         self.name = name
         self.createdOn = createdOn
         self.updatedOn = updatedOn
-        self.targetLowPrice = 0.0
-        self.targetHighPrice = 0.0
-        self.currentPrice = 0.0
-        self.intialPrice = 0.0
+        self.targetLowPrice = targetLow
+        self.targetHighPrice = targetHigh
+        self.currentPrice = currentPrice
+        self.intialPrice = initialPrice
     }
 }
