@@ -50,6 +50,10 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func newDocument(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "ShowAddView", sender: self)
+    }
+
     @IBAction func delete(_ sender: AnyObject) {
         // the value of `tableView.selectedRow` will be -1 if row on tableview is 
         // selected and delete key is pressed
