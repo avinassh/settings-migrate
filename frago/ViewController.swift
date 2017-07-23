@@ -28,6 +28,11 @@ class ViewController: NSViewController {
         tableView.target = self
     }
 
+    override func viewDidAppear() {
+        // Disable window resizing and zoom
+        self.view.window?.styleMask.remove(NSWindowStyleMask.resizable)
+    }
+
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
