@@ -21,6 +21,23 @@ class GoogleStock {
         self.lastTradedPrice = getDouble(string: l_fix)
         self.lastTradedPriceCurrency = l_cur
     }
+
+    // Adds the current GoogleStock object to DB
+    func addtoDB(targetLow: String, targetHigh: String) -> Bool {
+        let stock = Stock(name: self.name)
+        stock.createdOn = Int64(Date().timeIntervalSince1970)
+        stock.updatedOn = Int64(Date().timeIntervalSince1970)
+        stock.targetLowPrice = getDouble(string: targetLow)
+        stock.targetHighPrice = getDouble(string: targetHigh)
+        stock.currentPrice = self.lastTradedPrice
+        stock.intialPrice = self.lastTradedPrice
+
+        if StocksDB.instance.addStock(stock: stock) != nil {
+            return true
+        } else {
+            return false
+        }
+    }
 }
 
 class GoogleFinance {
