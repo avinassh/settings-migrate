@@ -1057,10 +1057,10 @@ CA
             </objects>
             <point key="canvasLocation" x="15.5" y="861"/>
         </scene>
-        <!--View Controller-->
+        <!--Add View Controller-->
         <scene sceneID="Yw8-ze-Vhu">
             <objects>
-                <viewController id="Riw-vN-Fow" sceneMemberID="viewController">
+                <viewController id="Riw-vN-Fow" customClass="AddViewController" customModule="frago" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="gX0-O0-8iN">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1136,6 +1136,9 @@ CA
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="onSubmit:" target="Riw-vN-Fow" id="hLR-s6-hhg"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IzS-4h-NZi">
                                 <rect key="frame" x="265" y="34" width="82" height="32"/>
@@ -1153,6 +1156,12 @@ Gw
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="Bsl-83-vcw" id="rKi-Z5-5y8"/>
+                        <outlet property="submitButton" destination="RcU-9I-fjc" id="wju-LF-k5L"/>
+                        <outlet property="targetHighTextField" destination="gMg-Wl-OsP" id="E5W-Vr-cml"/>
+                        <outlet property="targetLowTextField" destination="BAk-G2-6lJ" id="u9S-bl-dDx"/>
+                    </connections>
                 </viewController>
                 <customObject id="Lkz-p8-b2A" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
