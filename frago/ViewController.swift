@@ -31,6 +31,9 @@ class ViewController: NSViewController {
     override func viewDidAppear() {
         // Disable window resizing and zoom
         self.view.window?.styleMask.remove(NSWindowStyleMask.resizable)
+        // Disable column reordering and resizing
+        tableView.allowsColumnResizing = false
+        tableView.allowsColumnReordering = false
     }
 
     override var representedObject: Any? {
