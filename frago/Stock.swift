@@ -16,7 +16,10 @@ class Stock {
     var targetHighPrice: Double
     var currentPrice: Double
     var intialPrice: Double
+    var exchange: String
+    var currency: String
 
+    // this init is used whenever a new Stock is to be added to DB
     init(name: String) {
         self.name = name
         self.createdOn = 0
@@ -25,10 +28,14 @@ class Stock {
         self.targetHighPrice = 0.0
         self.currentPrice = 0.0
         self.intialPrice = 0.0
+        self.exchange = ""
+        self.currency = ""
     }
 
+    // this init is used whenever a new Stock is loaded from the DB
     init(name: String, createdOn: Int64, updatedOn: Int64, targetLow: Double,
-         targetHigh: Double, currentPrice: Double, initialPrice: Double) {
+         targetHigh: Double, currentPrice: Double, initialPrice: Double,
+         exchange: String, currency: String) {
         self.name = name
         self.createdOn = createdOn
         self.updatedOn = updatedOn
@@ -36,5 +43,7 @@ class Stock {
         self.targetHighPrice = targetHigh
         self.currentPrice = currentPrice
         self.intialPrice = initialPrice
+        self.exchange = exchange
+        self.currency = currency
     }
 }

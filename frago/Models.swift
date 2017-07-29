@@ -18,6 +18,8 @@ class StocksDB {
     private let targetHighPrice = Expression<Double>("target_high_price")
     private let currentPrice = Expression<Double>("current_price")
     private let intialPrice = Expression<Double>("intial_price")
+    private let exchange = Expression<String>("exchange")
+    private let currency = Expression<String>("currency")
 
     static let instance = StocksDB()
     private let db: Connection?
@@ -46,13 +48,16 @@ class StocksDB {
     func initDB() {
         do {
             try db!.run(stock_table.create(ifNotExists: true) { table in
-                table.column(name, primaryKey: true)
+                table.column(name)
                 table.column(createdOn)
                 table.column(updatedOn)
                 table.column(targetLowPrice)
                 table.column(targetHighPrice)
                 table.column(currentPrice)
                 table.column(intialPrice)
+                table.column(exchange)
+                table.column(currency)
+                table.unique(name, exchange)
             })
         } catch {
             fatalError("Failed to create tables")
@@ -69,7 +74,9 @@ class StocksDB {
                 targetLowPrice <- stock.targetLowPrice,
                 targetHighPrice <- stock.targetHighPrice,
                 intialPrice <- stock.intialPrice,
-                currentPrice <- stock.currentPrice)
+                currentPrice <- stock.currentPrice,
+                exchange <- stock.exchange,
+                currency <- stock.currency)
             let id = try db!.run(insert)
             return id
         } catch {
@@ -103,7 +110,9 @@ class StocksDB {
                     targetLow: stock[targetLowPrice],
                     targetHigh: stock[targetHighPrice],
                     currentPrice: stock[currentPrice],
-                    initialPrice: stock[intialPrice]))
+                    initialPrice: stock[intialPrice],
+                    exchange: stock[exchange],
+                    currency: stock[currency]))
             }
         } catch {
             print("Unable to fetch stocks from DB")

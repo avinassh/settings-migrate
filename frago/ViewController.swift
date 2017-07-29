@@ -69,6 +69,9 @@ class ViewController: NSViewController, AddViewControllerDelegate {
         self.performSegue(withIdentifier: "ShowAddView", sender: self)
     }
 
+    // TODO: Optimize this method. Should be called only if new row was added.
+    // OR write a method which takes the last added row from DB and adds that
+    // row to tableview
     func addViewDismissed() {
         stocks = StocksDB.instance.getStocks()
         tableView.reloadData()
@@ -112,16 +115,16 @@ extension ViewController: NSTableViewDelegate {
             value = stock.name
         } else if tableColumn == tableView.tableColumns[1] {
             cellIdentifier = "InitialPriceCellID"
-            value = String(describing: stock.intialPrice)
+            value = getCurrencyString(price: stock.intialPrice, currency: stock.currency)
         } else if tableColumn == tableView.tableColumns[2] {
             cellIdentifier = "CurrentPriceCellID"
-            value = String(describing: stock.currentPrice)
+            value = getCurrencyString(price: stock.currentPrice, currency: stock.currency)
         } else if tableColumn == tableView.tableColumns[3] {
             cellIdentifier = "TargetLowCellID"
-            value = String(describing: stock.targetLowPrice)
+            value = getCurrencyString(price: stock.targetLowPrice, currency: stock.currency)
         } else if tableColumn == tableView.tableColumns[4] {
             cellIdentifier = "TargetHighCellID"
-            value = String(describing: stock.targetHighPrice)
+            value = getCurrencyString(price: stock.targetHighPrice, currency: stock.currency)
         }
 
         if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
@@ -153,4 +156,8 @@ extension ViewController: NSTableViewDelegate {
 func getDouble(string: String) -> Double {
     let formatter = NumberFormatter()
     return formatter.number(from: string) as? Double ?? 0
+}
+
+func getCurrencyString(price: Double, currency: String) -> String {
+    return currency + String(format: "%.02f", price)
 }
