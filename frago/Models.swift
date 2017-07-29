@@ -48,7 +48,7 @@ class StocksDB {
     func initDB() {
         do {
             try db!.run(stock_table.create(ifNotExists: true) { table in
-                table.column(name, primaryKey: true)
+                table.column(name)
                 table.column(createdOn)
                 table.column(updatedOn)
                 table.column(targetLowPrice)
@@ -57,6 +57,7 @@ class StocksDB {
                 table.column(intialPrice)
                 table.column(exchange)
                 table.column(currency)
+                table.unique(name, exchange)
             })
         } catch {
             fatalError("Failed to create tables")

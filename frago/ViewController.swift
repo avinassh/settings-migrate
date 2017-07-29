@@ -69,6 +69,9 @@ class ViewController: NSViewController, AddViewControllerDelegate {
         self.performSegue(withIdentifier: "ShowAddView", sender: self)
     }
 
+    // TODO: Optimize this method. Should be called only if new row was added.
+    // OR write a method which takes the last added row from DB and adds that
+    // row to tableview
     func addViewDismissed() {
         stocks = StocksDB.instance.getStocks()
         tableView.reloadData()
