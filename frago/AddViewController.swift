@@ -32,6 +32,12 @@ class AddViewController: NSViewController {
     }
 
     func close() {
+        // `close` is not called when `Cancel` button on view is clicked. Cancel button
+        // is linked to dismissController method
+
+        // `close` is called from GoogleFinance and whenever close is called
+        // tableView in main view is reloaded (because `addViewDismissed`)
+
         self.delegate?.addViewDismissed()
         self.dismiss(nil)
     }
