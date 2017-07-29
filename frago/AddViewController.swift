@@ -9,12 +9,19 @@
 import Foundation
 import Cocoa
 
+protocol AddViewControllerDelegate{
+    func addViewDismissed()
+}
+
+
 class AddViewController: NSViewController {
 
     @IBOutlet weak var nameTextField: NSTextField!
     @IBOutlet weak var targetLowTextField: NSTextField!
     @IBOutlet weak var targetHighTextField: NSTextField!
     @IBOutlet weak var submitButton: NSButton!
+
+    var delegate:AddViewControllerDelegate? = nil
 
     @IBAction func onSubmit(_ sender: NSButton) {
         self.toggleButton()
@@ -25,11 +32,13 @@ class AddViewController: NSViewController {
     }
 
     func close() {
+        self.delegate?.addViewDismissed()
         self.dismiss(nil)
     }
 
     // if the response from Google is non 200, handle that here
     func onFailure(message: String) {
+
         let alert = NSAlert.init()
         alert.messageText = "Adding a new stock failed"
         alert.informativeText = message

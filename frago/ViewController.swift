@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, AddViewControllerDelegate {
 
     @IBOutlet weak var nameTextField: NSTextField!
     @IBOutlet weak var targetLowTextField: NSTextField!
@@ -58,8 +58,20 @@ class ViewController: NSViewController {
         }
     }
 
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowAddView" {
+            let vc = segue.destinationController as! AddViewController
+            vc.delegate = self
+        }
+    }
+
     @IBAction func newDocument(_ sender: AnyObject) {
         self.performSegue(withIdentifier: "ShowAddView", sender: self)
+    }
+
+    func addViewDismissed() {
+        stocks = StocksDB.instance.getStocks()
+        tableView.reloadData()
     }
 
     @IBAction func delete(_ sender: AnyObject) {
