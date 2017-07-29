@@ -43,11 +43,11 @@ class GoogleStock {
 }
 
 class GoogleFinance {
-    private static let apiURL = "https://finance.google.com/finance/info?client=ig&q=NSE:"
+    private static let apiURL = "https://finance.google.com/finance/info?client=ig&q="
 
     static func addStock(name: String, targetLow: String, targetHigh: String,
                          addViewController: AddViewController) {
-        Alamofire.request("https://finance.google.com/finance/info?client=ig&q=NSE:\(name)")
+        Alamofire.request("\(apiURL)\(name)")
             .responseString { response in
 
                 if response.response?.statusCode != 200 {
