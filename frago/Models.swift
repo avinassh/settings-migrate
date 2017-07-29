@@ -99,7 +99,11 @@ class StocksDB {
                 stocks.append(Stock(
                     name: stock[name],
                     createdOn: stock[createdOn],
-                    updatedOn: stock[updatedOn]))
+                    updatedOn: stock[updatedOn],
+                    targetLow: stock[targetLowPrice],
+                    targetHigh: stock[targetHighPrice],
+                    currentPrice: stock[currentPrice],
+                    initialPrice: stock[intialPrice]))
             }
         } catch {
             print("Unable to fetch stocks from DB")
