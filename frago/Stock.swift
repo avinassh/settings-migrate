@@ -16,6 +16,8 @@ class Stock {
     var targetHighPrice: Double
     var currentPrice: Double
     var intialPrice: Double
+    var exchange: String
+    var currency: String
 
     init(name: String) {
         self.name = name
@@ -25,10 +27,12 @@ class Stock {
         self.targetHighPrice = 0.0
         self.currentPrice = 0.0
         self.intialPrice = 0.0
+        self.exchange = ""
+        self.currency = ""
     }
 
     init(name: String, createdOn: Int64, updatedOn: Int64, targetLow: Double,
-         targetHigh: Double, currentPrice: Double, initialPrice: Double) {
+         targetHigh: Double, currentPrice: Double, initialPrice: Double, exchange: String) {
         self.name = name
         self.createdOn = createdOn
         self.updatedOn = updatedOn
@@ -36,5 +40,7 @@ class Stock {
         self.targetHighPrice = targetHigh
         self.currentPrice = currentPrice
         self.intialPrice = initialPrice
+        self.exchange = exchange
+        self.currency = ""
     }
 }

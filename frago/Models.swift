@@ -18,6 +18,8 @@ class StocksDB {
     private let targetHighPrice = Expression<Double>("target_high_price")
     private let currentPrice = Expression<Double>("current_price")
     private let intialPrice = Expression<Double>("intial_price")
+    private let exchange = Expression<String>("exchange")
+    private let currency = Expression<String>("currency")
 
     static let instance = StocksDB()
     private let db: Connection?
@@ -53,6 +55,8 @@ class StocksDB {
                 table.column(targetHighPrice)
                 table.column(currentPrice)
                 table.column(intialPrice)
+                table.column(exchange)
+                table.column(currency)
             })
         } catch {
             fatalError("Failed to create tables")
@@ -103,7 +107,8 @@ class StocksDB {
                     targetLow: stock[targetLowPrice],
                     targetHigh: stock[targetHighPrice],
                     currentPrice: stock[currentPrice],
-                    initialPrice: stock[intialPrice]))
+                    initialPrice: stock[intialPrice],
+                    exchange: stock[exchange]))
             }
         } catch {
             print("Unable to fetch stocks from DB")
