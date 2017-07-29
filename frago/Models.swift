@@ -73,7 +73,9 @@ class StocksDB {
                 targetLowPrice <- stock.targetLowPrice,
                 targetHighPrice <- stock.targetHighPrice,
                 intialPrice <- stock.intialPrice,
-                currentPrice <- stock.currentPrice)
+                currentPrice <- stock.currentPrice,
+                exchange <- stock.exchange,
+                currency <- stock.currency)
             let id = try db!.run(insert)
             return id
         } catch {
@@ -108,7 +110,8 @@ class StocksDB {
                     targetHigh: stock[targetHighPrice],
                     currentPrice: stock[currentPrice],
                     initialPrice: stock[intialPrice],
-                    exchange: stock[exchange]))
+                    exchange: stock[exchange],
+                    currency: stock[currency]))
             }
         } catch {
             print("Unable to fetch stocks from DB")

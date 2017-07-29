@@ -31,6 +31,8 @@ class GoogleStock {
         stock.targetHighPrice = getDouble(string: targetHigh)
         stock.currentPrice = self.lastTradedPrice
         stock.intialPrice = self.lastTradedPrice
+        stock.exchange = self.exchange
+        stock.currency = getCurrency(currencyPrice: self.lastTradedPriceCurrency)
 
         if StocksDB.instance.addStock(stock: stock) != nil {
             return true
@@ -73,4 +75,22 @@ class GoogleFinance {
                 }
         }
     }
+}
+
+// `currencyPrice` is from Google, is a string contains the price and also
+// price symbol. For US exchanges, it doesn't contain any symbol
+//
+// eg.: "1,246" (for NASDAQ, NYSE etc)
+// eg.: "₹127" (for BSE, NSE etc)
+func getCurrency(currencyPrice: String) -> String {
+    // if the first character is a number, return $ else whatever that 
+    // character is
+    let regEx  = "^[0-9].*"
+    let testCase = NSPredicate(format:"SELF MATCHES %@", regEx)
+    if testCase.evaluate(with: currencyPrice) {
+        return "$"
+    }
+    // let firstCharIndex = currencyPrice.index(currencyPrice.startIndex, offsetBy: 1)
+    // return currencyPrice.substring(to: firstCharIndex)
+    return "₹"
 }
