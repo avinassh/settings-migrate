@@ -90,7 +90,19 @@ func getCurrency(currencyPrice: String) -> String {
     if testCase.evaluate(with: currencyPrice) {
         return "$"
     }
-    // let firstCharIndex = currencyPrice.index(currencyPrice.startIndex, offsetBy: 1)
-    // return currencyPrice.substring(to: firstCharIndex)
-    return "₹"
+    let currencyPriceHTML = currencyPrice.html2AttributedString
+    let firstCharIndex = currencyPriceHTML.index(currencyPriceHTML.startIndex, offsetBy: 1)
+    return currencyPriceHTML.substring(to: firstCharIndex)
+}
+
+extension String {
+    var html2AttributedString: String {
+        do {
+            let val = try NSAttributedString(data: Data(utf8), options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue], documentAttributes: nil)
+            return val.string
+        } catch {
+            print(error)
+            return "$"
+        }
+    }
 }
