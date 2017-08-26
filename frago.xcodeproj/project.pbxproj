@@ -18,6 +18,8 @@
 		82AB357F1F1DF2F900C6F661 /* fragoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AB357E1F1DF2F900C6F661 /* fragoTests.swift */; };
 		82AB358A1F1DF2F900C6F661 /* fragoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AB35891F1DF2F900C6F661 /* fragoUITests.swift */; };
 		82D56FE01F23B7B800BAF0F5 /* GoogleFinance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D56FDF1F23B7B800BAF0F5 /* GoogleFinance.swift */; };
+		82F7392A1F51B36D00EE7D63 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F739291F51B36D00EE7D63 /* main.swift */; };
+		82F739311F51B3C800EE7D63 /* frago-cron in CopyFiles */ = {isa = PBXBuildFile; fileRef = 82F739271F51B36D00EE7D63 /* frago-cron */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B94E4CC0268B03AFEF862083 /* Pods_fragoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B00435FBF802FBB98308E3 /* Pods_fragoUITests.framework */; };
 		C3F9946B6AF2045DF9D3A80D /* Pods_frago.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F54E5D997281CD9BB0B2AEE /* Pods_frago.framework */; };
 		F9B3422E4073F53CA76E0D30 /* Pods_fragoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906F90CD4096E13C5DB63AF9 /* Pods_fragoTests.framework */; };
@@ -38,7 +40,36 @@
 			remoteGlobalIDString = 82AB35651F1DF2F800C6F661;
 			remoteInfo = frago;
 		};
+		82F7392E1F51B3B300EE7D63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82AB355E1F1DF2F800C6F661 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82F739261F51B36D00EE7D63;
+			remoteInfo = "frago-cron";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		82F739251F51B36D00EE7D63 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		82F739301F51B3BD00EE7D63 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 12;
+			files = (
+				82F739311F51B3C800EE7D63 /* frago-cron in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0F54E5D997281CD9BB0B2AEE /* Pods_frago.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frago.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +94,8 @@
 		82AB35891F1DF2F900C6F661 /* fragoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fragoUITests.swift; sourceTree = "<group>"; };
 		82AB358B1F1DF2F900C6F661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82D56FDF1F23B7B800BAF0F5 /* GoogleFinance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleFinance.swift; sourceTree = "<group>"; };
+		82F739271F51B36D00EE7D63 /* frago-cron */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "frago-cron"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82F739291F51B36D00EE7D63 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8EAD25F7CE10B50930D9761B /* Pods-fragoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fragoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fragoUITests/Pods-fragoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		906F90CD4096E13C5DB63AF9 /* Pods_fragoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fragoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C0D826CD5263BE8B64919D /* Pods-fragoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fragoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fragoTests/Pods-fragoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +127,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		82F739241F51B36D00EE7D63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				82AB35681F1DF2F800C6F661 /* frago */,
+				82F739281F51B36D00EE7D63 /* frago-cron */,
 				82AB357D1F1DF2F900C6F661 /* fragoTests */,
 				82AB35881F1DF2F900C6F661 /* fragoUITests */,
 				82AB35671F1DF2F800C6F661 /* Products */,
@@ -115,6 +156,7 @@
 				82AB35661F1DF2F800C6F661 /* frago.app */,
 				82AB357A1F1DF2F900C6F661 /* fragoTests.xctest */,
 				82AB35851F1DF2F900C6F661 /* fragoUITests.xctest */,
+				82F739271F51B36D00EE7D63 /* frago-cron */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +196,14 @@
 			path = fragoUITests;
 			sourceTree = "<group>";
 		};
+		82F739281F51B36D00EE7D63 /* frago-cron */ = {
+			isa = PBXGroup;
+			children = (
+				82F739291F51B36D00EE7D63 /* main.swift */,
+			);
+			path = "frago-cron";
+			sourceTree = "<group>";
+		};
 		F03C6BAC61858A0964FE21BE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,10 +240,12 @@
 				82AB35641F1DF2F800C6F661 /* Resources */,
 				EA0E27F8ACF5647C99ADA25A /* [CP] Embed Pods Frameworks */,
 				94AC55D86B25CCD46DD74E3B /* [CP] Copy Pods Resources */,
+				82F739301F51B3BD00EE7D63 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				82F7392F1F51B3B300EE7D63 /* PBXTargetDependency */,
 			);
 			name = frago;
 			productName = frago;
@@ -242,6 +294,23 @@
 			productReference = 82AB35851F1DF2F900C6F661 /* fragoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		82F739261F51B36D00EE7D63 /* frago-cron */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82F7392D1F51B36D00EE7D63 /* Build configuration list for PBXNativeTarget "frago-cron" */;
+			buildPhases = (
+				82F739231F51B36D00EE7D63 /* Sources */,
+				82F739241F51B36D00EE7D63 /* Frameworks */,
+				82F739251F51B36D00EE7D63 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "frago-cron";
+			productName = "frago-cron";
+			productReference = 82F739271F51B36D00EE7D63 /* frago-cron */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -266,6 +335,10 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 82AB35651F1DF2F800C6F661;
 					};
+					82F739261F51B36D00EE7D63 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 82AB35611F1DF2F800C6F661 /* Build configuration list for PBXProject "frago" */;
@@ -284,6 +357,7 @@
 				82AB35651F1DF2F800C6F661 /* frago */,
 				82AB35791F1DF2F900C6F661 /* fragoTests */,
 				82AB35841F1DF2F900C6F661 /* fragoUITests */,
+				82F739261F51B36D00EE7D63 /* frago-cron */,
 			);
 		};
 /* End PBXProject section */
@@ -483,6 +557,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		82F739231F51B36D00EE7D63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82F7392A1F51B36D00EE7D63 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -495,6 +577,11 @@
 			isa = PBXTargetDependency;
 			target = 82AB35651F1DF2F800C6F661 /* frago */;
 			targetProxy = 82AB35861F1DF2F900C6F661 /* PBXContainerItemProxy */;
+		};
+		82F7392F1F51B3B300EE7D63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82F739261F51B36D00EE7D63 /* frago-cron */;
+			targetProxy = 82F7392E1F51B3B300EE7D63 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -692,6 +779,24 @@
 			};
 			name = Release;
 		};
+		82F7392B1F51B36D00EE7D63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		82F7392C1F51B36D00EE7D63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -727,6 +832,15 @@
 			buildConfigurations = (
 				82AB35951F1DF2F900C6F661 /* Debug */,
 				82AB35961F1DF2F900C6F661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82F7392D1F51B36D00EE7D63 /* Build configuration list for PBXNativeTarget "frago-cron" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82F7392B1F51B36D00EE7D63 /* Debug */,
+				82F7392C1F51B36D00EE7D63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
